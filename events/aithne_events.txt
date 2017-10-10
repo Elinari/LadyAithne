@@ -1,0 +1,53 @@
+namespace = LA
+
+character_event = {
+	id = LA.001
+	hide_window = yes 
+	is_triggered_only = yes
+
+	#has_dlc = "Mystics" #check
+	prisoner = no
+	min_age = 16
+
+	#trigger = {
+	#
+	#	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				prisoner = no
+				age = 16
+				#has_trait = <I can't remember>
+				is_female = yes
+			}
+			save_event_target_as = lady_vampire
+		}
+		character_event = {id = LA.002 days = 1}
+	}
+
+}
+
+
+
+character_event = {
+	id = LA.002
+	desc = "EVT_DESC_LA_002"
+	picture = "GFX_evt_battle"
+	border = "GFX_event_normal_frame_diplomacy"
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "EXCELLENT"
+	}
+
+}
