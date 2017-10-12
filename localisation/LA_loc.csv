@@ -1,2 +1,38 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-EVT_DESC_LA_002;This is what my event text is. Hi!;;;;;;;;;;;;;x
+EVT_DESC_LA_002;Rumours are circulating of a woman suffering from extremely pallid skin that is almost icy to the touch, soulless eyes, and a disturbing smile. [Root.job_treasurer.GetFirstName] recognises the description, and suggests you call [lady_vampire.GetFirstName] to court.;;;;;;;;;;;;;x
+EVTOPTA_LA_002;Very well, [Root.job_treasurer.GetFirstName]. Bring her.;;;;;;;;;;;;;x
+EVTOPTB_LA_002;I do not listen to rumours, [Root.job_treasurer.GetFirstName].;;;;;;;;;;;;;x
+EVTOPTA_LA_002_TT;[lady_vampire.GetFirstName] is brought to visit your court.;;;;;;;;;;;;;x
+EVT_DESC_LA_003;[lady_vampire.GetFirstName] arrives alone, with skin so pale she looks as if she has never seen the sun. She speaks politely and demurely, with calculated words. She has heard the rumours, but dismisses them as gossip. The woman is certainly intriguing, but something seems off about her.;;;;;;;;;;;;;x
+EVTOPTA_LA_003;Thank you for your time. You are free to leave.;;;;;;;;;;;;;x
+EVTOPTB_LA_003;Please, stay here at court for a few days, as my guest.;;;;;;;;;;;;;x
+EVTOPTA_LA_003_TT;[lady_vampire.GetFirstName] returns home.;;;;;;;;;;;;;x
+EVTOPTB_LA_003_TT;[lady_vampire.GetFirstName] takes up rooms nearby.;;;;;;;;;;;;;x
+EVT_DESC_LA_004;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_004;Strange. We must investigate!;;;;;;;;;;;;;x
+EVTOPTB_LA_004;Don't be foolish, [lady_vampire.GetFirstName] had nothing to do with this.;;;;;;;;;;;;;x
+EVT_DESC_LA_005;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_005;I will go speak to [lady_vampire.GetFirstName] at once.;;;;;;;;;;;;;x
+EVTOPTB_LA_005;[Root.job_treasurer.GetFirstName], keep an eye on the lady.;;;;;;;;;;;;;x
+EVTOPTC_LA_005;You truly seem unwell. Best you head back home.;;;;;;;;;;;;;x
+EVT_DESC_LA_006;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_006;No need for such harsh words!;;;;;;;;;;;;;x
+EVTOPTB_LA_006;If you say so, [lady_vampire.GetFirstName]...;;;;;;;;;;;;;x
+EVTOPTC_LA_006;I did not mean to pry. You are free to take your leave.;;;;;;;;;;;;;x
+EVT_DESC_LA_007;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_007;I knew there was something strange about her!;;;;;;;;;;;;;x
+EVTOPTB_LA_007;Perhaps a second opinion would help?;;;;;;;;;;;;;x
+EVTOPTC_LA_007;Best she leaves, before even darker rumours start.;;;;;;;;;;;;;x
+EVT_DESC_LA_008;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_008;Help! This woman is a demon!;;;;;;;;;;;;;x
+EVTOPTB_LA_008;Guards, throw this creature out!;;;;;;;;;;;;;x
+EVT_DESC_LA_009;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_009;Then there is no doubt - the creature must be destroyed!;;;;;;;;;;;;;x
+EVTOPTB_LA_009;She cannot be allowed to stay here without answers!;;;;;;;;;;;;;x
+EVTOPTC_LA_009;I want that demon expelled from my lands!;;;;;;;;;;;;;x
+EVT_DESC_LA_010;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_010;Bah! At least she won't befoul this place any more.;;;;;;;;;;;;;x
+EVTOPTB_LA_010;Good riddance!;;;;;;;;;;;;;x
+EVT_DESC_LA_011;Placeholder text;;;;;;;;;;;;;x
+EVTOPTA_LA_011;I fear what she may do next...;;;;;;;;;;;;;x
+
