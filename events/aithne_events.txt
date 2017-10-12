@@ -1,41 +1,46 @@
 namespace = LA
 
+#Sets up the lady vampire
 character_event = {
 	id = LA.001
 	hide_window = yes 
 	is_triggered_only = yes
 
-	#has_dlc = "Mystics" #check
+	has_dlc = "Mystics"
 	prisoner = no
 	min_age = 16
 
-	#trigger = {
-	#
-	#	}
+	trigger = {
+		any_courtier = {
+			prisoner = no
+			age = 16
+			is_female = yes
+			NOT = {is_close_relative = ROOT}
+		}
+	}
 
 	immediate = {
 		random_courtier = {
 			limit = {
 				prisoner = no
 				age = 16
-				#has_trait = <I can't remember>
 				is_female = yes
+				NOT = {is_close_relative = ROOT}
 			}
 			save_event_target_as = lady_vampire
 		}
-		character_event = {id = LA.002 days = 1}
+		character_event = {id = LA.002 days = 1} #This will trigger event 2 after 1 day has passed
 	}
 
 }
 
 
-
+#Start of event chain
 character_event = {
 	id = LA.002
-	desc = "EVT_DESC_LA_002"
-	picture = "GFX_evt_battle"
-	border = "GFX_event_normal_frame_diplomacy"
-
+	desc = EVT_DESC_LA_002
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
 	is_triggered_only = yes
 
 	trigger = {
@@ -43,11 +48,289 @@ character_event = {
 	}
 
 	immediate = {
+		ROOT = {
+		set_character_flag = investigating_lady_vampire
+		}
+	}
+
+	option = {
+		name = EVTOPTA_LA_002
+		custom_tooltip = {
+			text = EVTOPTA_LA_002_TT
+		}
+		character_event = {id = LA.003 days = 3}
+	}
+	option = {
+		name = EVTOPTB_LA_002
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#If you brought her to court
+character_event = {
+	id = LA.003
+	desc = EVT_DESC_LA_003
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
 
 	}
 
 	option = {
-		name = "EXCELLENT"
+		name = EVTOPTA_LA_003
+		custom_tooltip = {
+			text = EVTOPTA_LA_003_TT
+		}
+		clr_character_flag = investigating_lady_vampire
+	}
+	option = {
+		name = EVTOPTB_LA_003
+		custom_tooltip = {
+			text = EVTOPTB_LA_003_TT
+		}
+		character_event = {id = LA.004 days = 2}  #change this before final
+	}
+}
+
+#Lady still at court
+character_event = {
+	id = LA.004
+	desc = EVT_DESC_LA_004
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
 	}
 
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_004
+		character_event = {id = LA.005 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_004
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#She doesn't look well
+character_event = {
+	id = LA.005
+	desc = EVT_DESC_LA_005
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_005
+		character_event = {id = LA.006 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_005
+		character_event = {id = LA.007 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTC_LA_005
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Confronting her the first time
+character_event = {
+	id = LA.006
+	desc = EVT_DESC_LA_006
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_006
+		character_event = {id = LA.008 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_006
+		character_event = {id = LA.007 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTC_LA_006
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Steward reports back
+character_event = {
+	id = LA.007
+	desc = EVT_DESC_LA_007
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_007
+		character_event = {id = LA.008 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_007
+		character_event = {id = LA.009 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTC_LA_007
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Bad confrontation
+character_event = {
+	id = LA.008
+	desc = EVT_DESC_LA_008
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_008
+		random = {
+			chance = 50
+			add_trait = wounded
+			}
+		character_event = {id = LA.009 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_008
+		add_trait = stressed
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Second opinion
+character_event = {
+	id = LA.009
+	desc = EVT_DESC_LA_009
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_009
+		character_event = {id = LA.010 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTB_LA_009
+		character_event = {id = LA.011 days = 2} #change this before final
+	}
+	option = {
+		name = EVTOPTC_LA_009
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Attack!
+character_event = {
+	id = LA.010
+	desc = EVT_DESC_LA_010
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_010
+		clr_character_flag = investigating_lady_vampire
+	}
+	option = {
+		name = EVTOPTB_LA_010
+		clr_character_flag = investigating_lady_vampire
+	}
+
+}
+
+#Bye Bye Vampire
+character_event = {
+	id = LA.011
+	desc = EVT_DESC_LA_011
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = investigating_lady_vampire
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = EVTOPTA_LA_011
+		random = {
+    		chance = 50     
+   			 add_trait = paranoid
+		}
+		clr_character_flag = investigating_lady_vampire
+	}
 }
